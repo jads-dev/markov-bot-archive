@@ -17,7 +17,7 @@
 	 */
 	let data = [];
 	onMount(async () => {
-		const res = await fetch('/data/markov_2022.json');
+		const res = await fetch('/2022/markov_2022.json');
 		data = await res.json();
 	});
 
@@ -46,6 +46,7 @@
 		return true;
 	});
 
+	// @ts-ignore
 	$: final_data = filtered_data.sort((a, b) => {
 		const [key, order] = order_by;
 		return a[key] > b[key] ? order : -order;
@@ -74,7 +75,7 @@
 		</Field>
 	</div>
 
-	<div class="h-[700px] p-1 overflow-auto discordwrapper">
+	<div class="h-[700px] p-1 overflow-auto discordwrapper mt-2">
 		{#each final_data as item}
 			<Lazy height="100px" class="group" unmount>
 				{@html item.content_html}
