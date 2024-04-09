@@ -18,7 +18,7 @@
 	 */
 	let data = [];
 	onMount(async () => {
-		const res = await fetch('`${base}/2023/markov_2023.json`');
+		const res = await fetch(`${base}/2023/markov_2023.json`);
 		data = await res.json();
 	});
 
