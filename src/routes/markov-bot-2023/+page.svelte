@@ -22,7 +22,6 @@
 	});
 
 	let filter_user = '';
-	let filter_message = '';
 
 	let order_bys = [
 		{ label: 'Reaction Count', value: ['reaction_count', -1] },
@@ -33,13 +32,6 @@
 
 	$: filtered_data = data.filter((item) => {
 		if (filter_user && !item.user_name.toLowerCase().includes(filter_user.toLowerCase())) {
-			return false;
-		}
-
-		if (
-			filter_message &&
-			!item.message_content.toLowerCase().includes(filter_message.toLowerCase())
-		) {
 			return false;
 		}
 
@@ -70,10 +62,7 @@
 		<Field label="User filter (IDS ONLY)" class="col-start-2 col-end-4">
 			<Input placeholder="Type something to filter by user id" bind:value={filter_user} />
 		</Field>
-		<Field label="Message filter" class="col-start-4 col-end-6">
-			<Input placeholder="Type something to filter by message" bind:value={filter_message} />
-		</Field>
-		<div class="col-span-6 place-self-center ">Scrolling on this page is a bit buggy, sorry.</div>
+		<div class="col-span-6 place-self-center">Scrolling on this page is a bit buggy, sorry.</div>
 	</div>
 
 	<div class="h-[700px] p-1 overflow-auto discordwrapper mt-2">
