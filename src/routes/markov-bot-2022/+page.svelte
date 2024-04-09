@@ -55,7 +55,7 @@
 </script>
 
 <div class="ml-2">
-	<h1 class="text-2xl font-semibold mb-2">Markov Bot 2022</h1>
+	<h1 class="text-2xl font-semibold mb-2">Markov Bot 2024</h1>
 	<div class="grid grid-cols-6 md:grid-cols-12">
 		<Field label="Order by" let:id class="col-start-1 col-end-2">
 			<select
