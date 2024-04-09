@@ -47,7 +47,7 @@
 
 	// @ts-ignore
 	let replace_html_base = (html) => {
-		return html.replace('$$$BASE$$$', base);
+		return html.replaceAll('|||BASE|||', base);
 	};
 </script>
 
