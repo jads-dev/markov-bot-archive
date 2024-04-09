@@ -44,6 +44,11 @@
 		const [key, order] = order_by;
 		return a[key] > b[key] ? order : -order;
 	});
+
+	// @ts-ignore
+	let replace_html_base = (html) => {
+		return html.replace('$$$BASE$$$', base);
+	};
 </script>
 
 <div class="ml-2">
@@ -70,7 +75,7 @@
 		{#each final_data as item}
 			<Lazy height="250px" class="group" unmount>
 				<div class="chatlog__message-group" style="border-top: 1px solid rgba(255,255,255,0.1);">
-					{@html item.content_html}
+					{@html replace_html_base(item.content_html)}
 				</div>
 			</Lazy>
 		{/each}

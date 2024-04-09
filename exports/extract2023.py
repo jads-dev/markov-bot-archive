@@ -36,18 +36,18 @@ for message_div in message_divs:
     imgs = message_div.find_all("img")
     for img in imgs:
         if img["src"].startswith("morbchat"):
-            img["src"] = f"/2023/morbchats/{img['src']}"
+            img["src"] = f"$$$BASE$$$/2023/morbchats/{img['src']}"
             title = img["title"]
             for word in title.split():
                 if word.startswith("morbchat_"):
                     user_ids = word.split("_", 1)[1][:-4].split("_")
         else:
-            img["src"] = f"/2023/other_images/{img['src']}"
+            img["src"] = f"$$$BASE$$$/2023/other_images/{img['src']}"
 
     # also fix hrefs
     for a in message_div.find_all("a"):
         if a["href"].startswith("morbchat_"):
-            a["href"] = f"/2023/morbchats/{a['href']}"
+            a["href"] = f"$$$BASE$$$/2023/morbchats/{a['href']}"
 
     reaction_count = 0
     reactions = message_div.find_all("div", class_="chatlog__reaction")
