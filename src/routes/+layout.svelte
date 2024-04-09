@@ -22,7 +22,7 @@
 		}
 	});
 	let nav_items = [
-		{ path: '/joe-bot-2024', text: 'Joe Bot 2024' },
+		// { path: '/joe-bot-2024', text: 'Joe Bot 2024' },
 		{ path: '/markov-bot-2024', text: 'Markov Bot 2024' },
 		{ path: '/markov-bot-2023', text: 'Markov Bot 2023' },
 		{ path: '/markov-bot-2022', text: 'Markov Bot 2022' }
