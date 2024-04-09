@@ -1,6 +1,7 @@
 <script>
 	import { Field, Input, Lazy } from 'svelte-ux';
 	import { onMount } from 'svelte';
+	import { base } from '$app/paths';
 
 	// sample item
 	// {
@@ -17,7 +18,7 @@
 	 */
 	let data = [];
 	onMount(async () => {
-		const res = await fetch('/2024/markov_2024.json');
+		const res = await fetch(`${base}/2024/markov_2024.json`);
 		data = await res.json();
 	});
 
