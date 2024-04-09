@@ -4,6 +4,10 @@
 	import { page } from '$app/stores';
 	import '../app.postcss';
 
+	import { base } from '$app/paths';
+
+	
+
 	settings({
 		components: {
 			AppBar: {
@@ -23,9 +27,9 @@
 	});
 	let nav_items = [
 		// { path: '/joe-bot-2024', text: 'Joe Bot 2024' },
-		{ path: '/markov-bot-2024', text: 'Markov Bot 2024' },
-		{ path: '/markov-bot-2023', text: 'Markov Bot 2023' },
-		{ path: '/markov-bot-2022', text: 'Markov Bot 2022' }
+		{ path: `${base}/markov-bot-2024`, text: 'Markov Bot 2024' },
+		{ path: `${base}/markov-bot-2023`, text: 'Markov Bot 2023' },
+		{ path: `${base}/markov-bot-2022`, text: 'Markov Bot 2022' }
 	];
 </script>
 
